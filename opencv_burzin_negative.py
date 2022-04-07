@@ -6,12 +6,12 @@ import cv2
 
 img = cv2.imread('/Users/josebendana/Desktop/Spring 2022/ME 369/Lightning Talk /Burzin final.png',1 )
 
-# Make new image by inverting BGR values
-img_neg = 255 - img
+# Make image gray with opencv command
 
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Save updated negative image to directory
-cv2.imwrite('buz.png',img)
+cv2.imwrite('gray_buz.png',img_gray)
 
 # This image is the cropped using and placed into google slides with animation
 
